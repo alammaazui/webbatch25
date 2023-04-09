@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        // primitive type
+        // let number = 55;
+        // let copyofnumber = number;
+        // number = 87;
+        // console.log(copyofnumber)
+
+
+
+        // refernce type
+
+        // let arr =[1,2,3,4,5,6]
+
+        // let copyofArr = [...arr]
+
+        // arr[0]="new value added"
+
+        // console.log(copyofArr)
+
+
+
+        // let add = function(num1,num2){
+
+        //     return num1+num2
+
+        // }
+
+
+        // add(1,2)
+
+         function add(...numbers){
+            let initial =0
+            for (let index = 0; index < numbers.length; index++) {
+                
+                 initial=initial+numbers[index]
+                 initial+=numbers[index]
+                
+            }
+
+            return initial
+        }
+
+
+       let total=add(1,2,3,4,5,6,7,8,9,5,6,7)
+       console.log(total)
+         let addWithstring=(message,...numbers)=>{
+            let initial =0
+            for (let index = 0; index < numbers.length; index++) {
+                
+                 initial=initial+numbers[index]
+                //  initial+=numbers[index]
+                
+            }
+
+            return message+initial
+        }
+
+        let a ="the sum of all numbers is : "
+
+       let totalnew=addWithstring(a,1,2,3,4,5,6,7,8,9,5,6,7)
+       console.log(totalnew)
+
+    </script>
+</body>
+</html>

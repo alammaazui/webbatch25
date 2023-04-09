@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script>
+        // Add "https://ipinfo.io" statement
+        // this will communicate with the ipify servers
+        // in order to retrieve the IP address
+        $.get("https://ipinfo.io", function (response) {
+            console.log(response)
+            fetch(`https://ipapi.co/${response.ip}/json/`)
+            .then((res)=>{
+                return res.json()
+
+            })
+            .then((data)=>{
+                console.log(data)
+            })
+            .catch(()=>{
+
+            })
+        }, "json")
+
+        // "json" shows that data will be fetched in json format
+    </script>
+
+
+
+
+</body>
+
+</html>

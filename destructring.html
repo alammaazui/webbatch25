@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <products>
+        <title>
+            samsung mobile
+        </title>
+        <price>
+            $1000
+        </price>
+
+    </products>
+
+
+    <script>
+
+
+let
+        // let givenArray = ["ali", "ahmed", "imran", "sufyaan"]
+
+
+        // let name1 = givenArray[0]
+        // let name2 = givenArray[1]
+        // let name3 = givenArray[2]
+        // let name4 = givenArray[3]
+
+        // console.log(givenArray[0])
+
+        // // destructring of a n array
+        // let [name1,name2,name3,name4] = givenArray
+
+        // console.log(name1)
+        // console.log(name2)
+        // console.log(name3)
+        // console.log(name4)
+
+ 
+        // parameter destructring
+
+
+
+        function student ({name,age}){
+
+            console.log(name)
+            console.log(age)
+
+        }
+
+
+        student({name:"ali",age:18})
+
+        function getGrades([i1,i2,i3,i4,i5,i6]){
+
+            console.log(i1)
+            console.log(i2)
+            console.log(i3)
+            console.log(i4)
+            console.log(i5)
+            console.log(i6)
+
+        }
+
+
+        getGrades(["A","B","C","D","E","F"])
+
+
+        function retObj() {
+
+            let student = {
+                name: "ahmed",
+                age: 18,
+                gender: "male",
+                isStudent: true
+            }
+
+            return student
+
+        }
+        function retArr() {
+
+            let arr =[1,2,3,4,5,6,7,8,9]
+
+            return arr
+
+
+         
+
+        }
+
+
+
+
+        let {name,age,gender,isStudent}=retObj()
+        let [i1,i2,i3,i4,i5,i6,i7,i8,i9,i10]=retArr()
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

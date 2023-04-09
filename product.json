@@ -1,0 +1,27 @@
+{
+
+    "products":[
+        {
+            "id":1,
+            "title":"men's shirt",
+            "price":200,
+            "availability":true,
+            "colors":["green","blue","red"]
+        },
+        {
+            "id":1,
+            "title":"men's shirt",
+            "price":200,
+            "availability":true,
+            "colors":["green","blue","red"]
+        },
+        {
+            "id":1,
+            "title":"men's shirt",
+            "price":200,
+            "availability":true,
+            "colors":["green","blue","red"]
+        }
+    ]
+
+}

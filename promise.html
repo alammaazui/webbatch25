@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+
+        const getData = function(resource){
+
+            return new Promise((resolved,reject)=>{
+
+
+                let xhr = new XMLHttpRequest();
+
+                xhr.addEventListener('readystatechange',()=>{
+
+
+                    if(xhr.readyState==4 && xhr.status==200){
+                        
+                        let data = JSON.parse(xhr.response)
+                        resolved(data)
+                    }
+                    else if(xhr.readyState==4){
+                        
+                        reject(`data could not load properly ${xhr.status} ${xhr.statusText}`)
+                    }
+
+                })
+
+                xhr.open('GET',resource)
+                xhr.send()
+
+
+
+
+            })
+
+        } 
+
+
+        getData(`https://jsonplaceholder.typicode.com/posts`)
+            .then((blogData)=>{
+                return getData(`https://jsonplaceholder.typicode.com/${blogData.user_Id}`)
+            })
+            .then((userData)=>{
+                
+                return getData(`https://jsonplaceholder.typicode.com/${blogData.user_Id}`)
+                console.log(userData)
+
+            })
+            .catch((error)=>{
+                console.log(error)
+            })
+            
+
+
+
+            // let retObj= function(){
+
+            //     return {
+            //         name:"ali",
+            //         age:{name:"ali"}
+            //     }
+
+            // }
+
+            // retObj().age.name
+    </script>
+
+
+</body>
+</html>

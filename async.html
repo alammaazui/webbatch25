@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="abc">
+
+    </div>
+
+    <script>
+
+
+        let getdata = async function () {
+
+            let resProduct = await fetch('https://fakestoreapi.com/products')
+            if (!resProduct.ok) {
+                throw new Error('product data could load properlr')
+            }
+            let dataProduct = await resProduct.json()
+            let resUser = await fetch('https://fakestoreapi.com/users')
+            if (!resUser.ok) {
+                throw new Error('users data could load properlr')
+            }
+            let dataUser = await resUser.json()
+
+            return { d1: dataProduct, d2: dataProduct }
+
+        }
+
+
+        getdata()
+            .then((obj) => {
+                // console.log(obj)
+                obj.d1.forEach(a => {
+                    document.getElementById("abc")
+                        .innerHTML += `<h3>${a.title}</h3>
+                <img src=${a.image} />`
+                });
+            })
+            .catch((err) => {
+                console.log(err.message)
+            })
+        // console.log("after getdata")
+
+    </script>
+</body>
+
+</html>

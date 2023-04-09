@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // object constructer
+
+
+        // let moazzam ={
+        //     name:"moazzam",
+        //     age:"18",
+        //     grnder:"male"
+        // }
+        // let sufyaan ={
+        //     name:"moazzam",
+        //     age:"18",
+        //     grnder:"male"
+        // }
+        // let sohaib ={
+        //     name:"moazzam",
+        //     age:"18",
+        //     grnder:"male"
+        // }
+        // let saad ={
+        //     name:"moazzam",
+        //     age:"18",
+        //     grnder:"male"
+        // }
+        // let furqan ={
+        //     name:"moazzam",
+        //     age:"18",
+        //     grnder:"male"
+        // }
+
+        // object constructer
+        // let Student = function(name,age,courses,gender){
+
+        //     this.fullname = name;
+        //     this.age = age;
+        //     this.courses = courses;
+        //     this.gender = gender;
+
+        //     this.greet =function(){
+        //         console.log(`hello how are you ${this.firstname }`)
+        //     }
+
+        // }
+
+        // let moaazamData = new Student('moazzam',18,['html','css','js'],"male")
+        // let sufyaanData = new Student('sufyaan',18,['html','css','js'],"male")
+
+
+        // console.log(moaazamData)
+        // sufyaanData.greet()
+        // moaazamData.greet()
+
+
+
+        // es6
+        class User {
+
+            constructor(name, age, gender) {
+                this.fullname = name;
+                this.age = age;
+                this.gender = gender;
+            }
+
+        }
+
+
+        class Student extends User {
+
+
+
+
+            constructor(name, age, gender, courses) {
+
+                super(name, age, gender)
+                this.courses = courses;
+
+                this.greet = function () {
+                    console.log(`hello how are you ${this.firstname}`)
+                }
+
+
+            }
+        }
+
+
+        let saadInstance = new Student("saad", 18, "male", ['html', 'css', 'js'])
+
+
+        console.log(saadInstance)
+
+        // new XMLHttpRequest()
+
+    </script>
+
+</body>
+
+</html>
